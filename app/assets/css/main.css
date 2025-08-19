@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'OmniEnglishFont';
+  src: url('/fonts/en.ttf') format('truetype');
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmniArabicFont';
+  src: url('/fonts/ar.ttf') format('truetype');
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmniAmazighFont';
+  src: url('/fonts/amz.ttf') format('truetype');
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+    .arabic-text {
+      font-family: 'OmniArabicFont', sans-serif;
+      color: #C2B067; /* Adjust color as needed */
+      font-weight: bold;
+      direction: rtl; /* Right-to-left text direction */
+    }
+
+    .amazigh-text {
+      font-family: 'OmniAmazighFont', sans-serif;
+      font-weight: bold;
+      color: #C2B067;
+    }
+    .english-text {
+      font-family: 'OmniEnglishFont', sans-serif;
+      color: #C2B067;
+      font-weight: bold;
+    }
+.language-btn {
+  @apply  border-[#C2B067] border-2 text-[#C2B067] font-bold py-2 px-4 rounded-sm;
+}
+.language-btn:hover {
+  @apply bg-[#C2B067] animate-pulse text-amber-50;
+}
+
+:root {
+  --ui-primary: var(--color-yellow-500);
+  --ui-primary-hover: var(--color-yellow-100);
+  --ui-border: var(#C2B067);
+}

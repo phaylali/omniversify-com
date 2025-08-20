@@ -2,16 +2,19 @@
   "welcome": "Welcome",
   "omniversify": "Omniversify",
   "omniversifyDescription": "Omniversify is not just a studio. It’s a cultural resistance — a renaissance. We call on Moroccan artists, researchers, and developers to reclaim our history, elevate Amazigh culture alongside Arabic, and showcase Morocco’s legacy in its true depth. Our worlds will speak in Arabic, Tamazight, and English — to unite our people and spread our culture globally — while rejecting both the separatist ideologies that divide us and the colonial language that once silenced us. Morocco’s next Renaissance will have your name on it.",
-  "home": "Home",
-  "ourMission": "Our Mission",
-  "blog": "Blog",
-  "games": "Games",
-  "projects": "Projects",
-  "loreCulture": "Lore & Culture",
-  "characters": "Characters",
-  "chronicles": "Chronicles",
-  "community": "Community",
-  "maps": "Maps",
-  "contact": "Contact Us",
-  "shop": "Shop"
+  "pages": {
+    "home": "Home",
+    "ourMission": "Our Mission",
+    "blog": "Blog",
+    "games": "Games",
+    "projects": "Projects",
+    "loreCulture": "Lore & Culture",
+    "characters": "Characters",
+    "chronicles": "Chronicles",
+    "community": "Community",
+    "maps": "Maps",
+    "contact": "Contact Us",
+    "shop": "Shop"
+  },
+  "content": "Content"
 }

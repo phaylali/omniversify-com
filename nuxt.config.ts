@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     typescript: {
     typeCheck: true
   },
-  modules: ['@nuxt/ui','@nuxtjs/i18n','@nuxt/fonts',],
+  modules: ['@nuxt/ui','@nuxtjs/i18n','@nuxt/fonts','@nuxt/content'],
   i18n: {
     defaultLocale: 'en',
     locales: [

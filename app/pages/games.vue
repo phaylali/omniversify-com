@@ -3,11 +3,11 @@ const { t } = useI18n();
 
 // Set the title dynamically
 useHead({
-  title: t('pages.loreCulture')
+  title: t('pages.games')
 });
 // Optional: Also set the titleKey for the layout
 definePageMeta({
-  titleKey: 'pages.loreCulture'
+  titleKey: 'pages.games'
 });
 </script>
 <template>

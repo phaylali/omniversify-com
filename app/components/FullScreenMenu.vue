@@ -1,37 +1,3 @@
-<template>
-    <div>
-        <!-- Menu Toggle Button -->
-        <button @click="toggleMenu" class="omni-btn">
-            <Menu />
-        </button>
-        <!-- Full Screen Overlay -->
-        <Teleport to="body">
-            <div v-if="isMenuOpen" class="menu-overlay" @click.self="closeMenu">
-                <!-- Left Vertical Bar -->
-                <div class="vertical-bar-left"></div>
-
-                <!-- Center Content Area -->
-                <div class="menu-content">
-                    <nav class="menu-nav">
-                        <div class="menu-items-container">
-                            <UButton v-for="item in menuItems" :key="item.id" @click="handleMenuClick(item)"
-                                variant="ghost" size="xl" class="menu-item locale-text">
-                                {{ $t(item.label) }}
-                            </UButton>
-                        </div>
-                    </nav>
-                </div>
-                <!-- Right Vertical Bar with Close Button -->
-                <div class="vertical-bar-right">
-                    <button @click="closeMenu" class="omni-btn">
-                        <Minimize2 />
-                    </button>
-                </div>
-            </div>
-        </Teleport>
-    </div>
-</template>
-
 <script setup lang="ts">
 interface MenuItem {
     id: string;
@@ -71,6 +37,12 @@ const toggleMenu = (): void => {
     }
 };
 
+const translationCorrector = (key: string): string => {
+    // This function can be used to correct translation keys if needed
+
+    return 'pages.' + key;    
+};
+
 const closeMenu = (): void => {
     isMenuOpen.value = false;
     document.body.style.overflow = '';
@@ -106,3 +78,39 @@ onUnmounted(() => {
     document.removeEventListener('keydown', handleKeydown);
 });
 </script>
+
+
+<template>
+    <div>
+        <!-- Menu Toggle Button -->
+        <button @click="toggleMenu" class="omni-btn">
+            <Menu />
+        </button>
+        <!-- Full Screen Overlay -->
+        <Teleport to="body">
+            <div v-if="isMenuOpen" class="menu-overlay" @click.self="closeMenu">
+                <!-- Left Vertical Bar -->
+                <div class="vertical-bar-left"></div>
+
+                <!-- Center Content Area -->
+                <div class="menu-content">
+                    <nav class="menu-nav">
+                        <div class="menu-items-container">
+                            <UButton v-for="item in menuItems" :key="item.id" @click="handleMenuClick(item)"
+                                variant="ghost" size="xl" class="menu-item locale-text">
+                                {{ $t(translationCorrector(item.label)) }}
+                            </UButton>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Right Vertical Bar with Close Button -->
+                <div class="vertical-bar-right">
+                    <button @click="closeMenu" class="omni-btn">
+                        <Minimize2 />
+                    </button>
+                </div>
+            </div>
+        </Teleport>
+    </div>
+</template>
+

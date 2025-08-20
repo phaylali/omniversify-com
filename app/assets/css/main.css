@@ -178,3 +178,24 @@
             background-image: url("data:image/svg+xml,%3csvg width='71' height='71' viewBox='-36 -36 72 72' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M 0,35.35 L 10.35,25 L 25,25 L 25,10.35 L 35.35,0 L 25,-10.35 L 25,-25 L 10.35,-25 L 0,-35.35 L -10.35,-25 L -25,-25 L -25,-10.35 L -35.35,0 L -25,10.35 L -25,25 L -10.35,25 Z' fill='none' stroke='rgba(128,128,128,0.25)' stroke-width='0.5'/%3e%3c/svg%3e");
             z-index: -1;
         }
+body {
+  background-color: #121212;
+}
+.main-container {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.simple-bar {
+  position: fixed;
+  top: 75px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: #C2B067;
+  z-index: 40;
+  border-radius: 2px;
+}

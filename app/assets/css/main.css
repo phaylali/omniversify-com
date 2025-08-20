@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'OmniEnglishFont', sans-serif;
 }
 
 
@@ -43,15 +43,138 @@
       color: #C2B067;
       font-weight: bold;
     }
+.locale-text {
+  /* Default font */
+  font-family: 'OmniEnglishFont', sans-serif;
+        color: #C2B067;
+      font-weight: bold;
+}
+[data-locale="en"] .locale-text,
+[data-locale="en-US"] .locale-text {
+  font-family: var(--font-en);
+}
+[data-locale="ar"] .locale-text,
+[data-locale="ar-MA"] .locale-text {
+  font-family: var(--font-ar);
+  direction: rtl;
+}
+[data-locale="zgh"] .locale-text,
+[data-locale="zgh-MA"] .locale-text {
+  font-family: var(--font-zgh);
+}
 .language-btn {
   @apply  border-[#C2B067] border-2 text-[#C2B067] font-bold py-2 px-4 rounded-sm;
 }
 .language-btn:hover {
-  @apply bg-[#C2B067] animate-pulse text-amber-50;
+  @apply bg-[#C2B067] animate-pulse text-amber-50 scale-105;
+}
+.omni-btn {
+  @apply  border-[#C2B067] border-2 text-[#C2B067] font-bold py-2 px-4 rounded-sm;
+}
+.omni-btn:hover {
+  @apply bg-[#C2B067] animate-pulse text-amber-50 scale-105;
 }
 
+
+
 :root {
-  --ui-primary: var(--color-yellow-500);
-  --ui-primary-hover: var(--color-yellow-100);
-  --ui-border: var(#C2B067);
+  --font-en: 'OmniEnglishFont', sans-serif;
+  --font-ar: 'OmniArabicFont', sans-serif;
+  --font-zgh: 'OmniAmazighFont', sans-serif;
 }
+
+/* Menu Toggle Button Styling */
+.menu-toggle-btn {
+  @apply transition-all duration-300 hover:scale-105;
+}
+
+/* Full Screen Overlay */
+.menu-overlay {
+  @apply fixed inset-0 z-50 flex;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Left Vertical Bar */
+.vertical-bar-left {
+@apply h-full relative w-20 pt-5;
+}
+
+/* Right Vertical Bar */
+.vertical-bar-right {
+  @apply h-full relative w-20 pt-5;
+  
+}
+
+
+
+/* Center Content Area */
+.menu-content {
+  @apply flex-1 flex items-center justify-center;
+  animation: slideUp 0.4s ease-out 0.1s both;
+}
+
+/* Navigation Container */
+.menu-nav {
+  @apply w-full max-w-md;
+}
+
+/* Menu Items Container */
+.menu-items-container {
+  @apply flex flex-col items-center ;
+}
+
+/* Individual Menu Items */
+.menu-item {
+@apply text-[#C2B067] font-bold py-2 px-4 rounded-sm text-2xl
+}
+
+.menu-item:hover {
+@apply border-[#C2B067] border-2 animate-pulse text-amber-50 scale-105;
+}
+
+.menu-item:active {
+  @apply scale-95 bg-[#C2B067];
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .menu-item {
+    @apply text-lg py-3 px-6;
+  }
+  
+  .menu-items-container {
+    @apply space-y-4;
+  }
+}
+.background-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3csvg width='71' height='71' viewBox='-36 -36 72 72' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M 0,35.35 L 10.35,25 L 25,25 L 25,10.35 L 35.35,0 L 25,-10.35 L 25,-25 L 10.35,-25 L 0,-35.35 L -10.35,-25 L -25,-25 L -25,-10.35 L -35.35,0 L -25,10.35 L -25,25 L -10.35,25 Z' fill='none' stroke='rgba(128,128,128,0.25)' stroke-width='0.5'/%3e%3c/svg%3e");
+            z-index: -1;
+        }

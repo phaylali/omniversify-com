@@ -32,7 +32,7 @@ stats:
 ---
 
 <!-- English Content -->
-::: en
+
 # The Legend of King Arthur
 
 King Arthur is a legendary British leader who, according to medieval histories and romances, led the defence of Britain against Saxon invaders in the late 5th and early 6th centuries.
@@ -48,10 +48,10 @@ One of Arthur's greatest achievements was the establishment of the Round Table, 
 ## Legacy
 
 Though Arthur's reign ended in tragedy at the Battle of Camlann, his legend lives on as a symbol of just leadership and noble ideals.
-:::
+
 
 <!-- Arabic Content -->
-::: ar
+
 # أسطورة الملك آرثر
 
 الملك آرثر هو قائد بريطاني أسطوري، وفقاً للتواريخ والقصص الرومانسية في العصور الوسطى، قاد دفاع بريطانيا ضد الغزاة الساكسونيين في أواخر القرنين الخامس والسادس.
@@ -67,10 +67,10 @@ Though Arthur's reign ended in tragedy at the Battle of Camlann, his legend live
 ## الإرث
 
 رغم أن عهد آرثر انتهى بالمأساة في معركة كاملان، إلا أن أسطورته تعيش كرمز للقيادة العادلة والمثل النبيلة.
-:::
+
 
 <!-- Amazigh Content -->
-::: amz
+
 # ⵜⴰⵏⵖⵉⵏⵜ ⵏ ⵓⴳⵍⵍⵉⴷ ⴰⵔⵜⵓⵔ
 
 ⴰⴳⵍⵍⵉⴷ ⴰⵔⵜⵓⵔ ⴷ ⴰⵏⴱⴰⵣ ⴰⴱⵔⵉⵟⴰⵏⵉ ⵏ ⵜⵓⵏⵖⵉⵏⵜ.
@@ -86,4 +86,4 @@ Though Arthur's reign ended in tragedy at the Battle of Camlann, his legend live
 ## ⴰⵡⴰⵔⵉⵙ
 
 ⵎⵇⵇⴰⵔ ⴰⴽⴽⵯ ⵉⴽⴽⴰ ⵓⵃⴽⵓⵎ ⵏ ⵡⴰⵔⵜⵓⵔ ⵙ ⵜⵎⴰⵜⵜ.
-:::
+
